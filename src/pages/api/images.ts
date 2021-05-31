@@ -52,7 +52,7 @@ export default async function handler(
     const { after } = req.query;
 
     const queryOptions = {
-      size: 6,
+      size: 2, // change to 6 before commit
       ...(after && { after: query.Ref(query.Collection('images'), after) }),
     };
 
